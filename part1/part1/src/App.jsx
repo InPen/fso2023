@@ -1,27 +1,31 @@
-//defined a new component Hello and used it inside the component App.
-const Hello = (props) => {
+//Error: Objects are not valid as a React child 
+// const App = () => {
+//   const friends = [
+//     { name: 'Peter', age: 4 },
+//     { name: 'Maya', age: 10 },
+//   ]
 
-  console.log(props)
-  return (
-    <div>
-      <p>
+//   return (
+//     <div>
+//       <p>{friends[0]}</p>
+//       <p>{friends[1]}</p>
+//     </div>
+//   )
+// }
 
-        Hello {props.name}, you are {props.age} years old
-      </p>
-    </div>
-  )
-}
+// export default App
+// ///////////////////////////////////////////////
 
 const App = () => {
-
-  const name = 'Peter'
-  const age = 10
+  const friends = [
+    { name: 'Peter', age: 4 },
+    { name: 'Maya', age: 10 },
+  ]
 
   return (
     <div>
-      <h1>Greetings</h1>
-      <Hello name='Maya' age={26 + 10} />
-      <Hello name={name} age={age} />
+      <p>{friends[0].name} {friends[0].age}</p>
+      <p>{friends[1].name} {friends[1].age}</p>
     </div>
   )
 }
