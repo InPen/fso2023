@@ -16,14 +16,23 @@ const Header = (props) => {
   )
 }
 
+const Content = (props) =>{
+  return (
+    <div>
+      <p> Content: {props.parts}</p>
+    </div>
+  )
+}
+
 
 const App = () => {
   const course = 'Half Stack application development'
+  const parts = ['Fundamentals of React', 'Using props to pass data', 'State of a component' ]
   return (
     <div>
       <Header course={course} />
-      {/* <Content ... />
-      <Total ... /> */}
+      <Content parts={parts} />
+      {/* <Total ... /> */}
     </div>
   )
 }
