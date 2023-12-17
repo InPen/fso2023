@@ -20,6 +20,9 @@ const Content = (props) => {
   return (
     <div>
       <h2> Content: {props.parts}</h2>
+      <p>{props.exercises1}</p>
+      <p>{props.exercises2}</p>
+      <p>{props.exercises3}</p>
     </div>
   )
 }
